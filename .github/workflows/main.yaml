@@ -19,8 +19,8 @@ jobs:
       - name: Setting up PHP
         uses: ./.github/actions/php
 
-      - name: Installing Composer
-        run: ./.github/scripts/run-composer.sh
+      # - name: Installing Composer
+      #   run: ./.github/scripts/run-composer.sh
 
       - name: Running PHPUnit
         run: ./.github/scripts/run-phpunit.sh
