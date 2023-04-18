@@ -1,0 +1,26 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@develop
+
+      - name: Setting up PHP
+        uses: ./.github/actions/php
+
+      - name: Installing Composer
+        run: ./.github/scripts/run-composer.sh
+
+      - name: Running PHPUnit
+        run: ./.github/scripts/run-phpunit.sh
