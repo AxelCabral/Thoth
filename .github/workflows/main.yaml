@@ -20,9 +20,7 @@ jobs:
         uses: ./.github/actions/php
 
       - name: Installing Composer
-        run: |
-          cp .env.ci .env
-          composer install --no-ansi --no-interaction --no-suggest --prefer-dist
+        run: ./.github/scripts/run-composer.sh
 
       - name: Running PHPUnit
         run: ./.github/scripts/run-phpunit.sh
