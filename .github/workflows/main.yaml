@@ -26,4 +26,4 @@ jobs:
       - name: Running PHPUnit
         run: |
           git update-index --chmod=+x application/third_party/vendor/bin/phpunit
-          sudo vendor/bin/phpunit vendor/phpunit/phpunit/tests/Runner --coverage-clover ./coverage.xml
+          sudo vendor/bin/phpunit vendor/phpunit/phpunit/tests/Util --coverage-clover ./coverage.xml
