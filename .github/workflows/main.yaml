@@ -21,9 +21,11 @@ jobs:
 
       - name: Installing Composer
         run: |
+          git update-index --chmod=+x application/third_party/vendor/bin/phpunit
           composer install --no-ansi --no-interaction --no-suggest --prefer-dist --ignore-platform-reqs
+          composer dumpautoload
 
       - name: Running PHPUnit
         run: |
           git update-index --chmod=+x application/third_party/vendor/bin/phpunit
-          sudo vendor/bin/phpunit vendor/phpunit/phpunit/tests/Util --coverage-clover ./coverage.xml
+          sudo vendor/bin/phpunit  application/third_party/vendor/phpunit/phpunit/tests/Extensions

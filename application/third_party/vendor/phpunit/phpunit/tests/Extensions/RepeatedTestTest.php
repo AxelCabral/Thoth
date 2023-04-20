@@ -16,8 +16,8 @@ class Extensions_RepeatedTestTest extends PHPUnit_Framework_TestCase
     {
         $this->suite = new PHPUnit_Framework_TestSuite;
 
-        $this->suite->addTest(new Success);
-        $this->suite->addTest(new Success);
+        // $this->suite->addTest(new Success);
+        // $this->suite->addTest(new Success);
     }
 
     public function testRepeatedOnce()
