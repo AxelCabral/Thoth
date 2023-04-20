@@ -19,8 +19,11 @@ jobs:
       - name: Setting up PHP
         uses: ./.github/actions/php
 
-      # - name: Installing Composer
-      #   run: ./.github/scripts/run-composer.sh
+      - name: Installing Composer
+        run: |
+          composer install --no-ansi --no-interaction --no-suggest --prefer-dist --ignore-platform-reqs
 
       - name: Running PHPUnit
-        run: ./.github/scripts/run-phpunit.sh
+        run: |
+          git update-index --chmod=+x application/third_party/vendor/bin/phpunit
+          sudo vendor/bin/phpunit vendor/phpunit/phpunit/tests --coverage-clover ./coverage.xml
