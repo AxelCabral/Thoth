@@ -1,6 +1,6 @@
 <?php
-use PHPUnit\Framework\TestCase;
-include_once "../models/Project_Model.php";
+// use PHPUnit\Framework\TestCase;
+// include_once "../models/Project_Model.php";
 
 class ProjectTest extends TestCase
 {
