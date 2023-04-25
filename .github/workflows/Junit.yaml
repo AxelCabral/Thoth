@@ -16,7 +16,7 @@ jobs:
         run: mvn package
 
       - name: Build with Maven
-        run: mvn clean install --% -Dmaven.test.skip=true
+        run: mvn clean install
 
       - name: Tests Selenium
         run: mvn test application/tests/Junit.Selenium/DescriptionTestTest.java
