@@ -14,3 +14,6 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: mvn package
+
+      - name: Tests Selenium
+        run: mvn test ./application/tests/Junit.Selenium
