@@ -28,4 +28,4 @@ jobs:
       - name: Running PHPUnit
         run: |
           git update-index --chmod=+x application/third_party/vendor/bin/phpunit
-          sudo vendor/bin/phpunit  application/third_party/vendor/phpunit/phpunit/tests/Extensions
+          sudo vendor/bin/phpunit  application/tests/
