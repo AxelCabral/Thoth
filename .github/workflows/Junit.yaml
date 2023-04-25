@@ -19,4 +19,4 @@ jobs:
         run: mvn clean install
 
       - name: Tests Selenium
-        run: mvn test application/tests/Junit.Selenium/DescriptionTestTest.java
+        run: mvn application/tests/Junit.Selenium/DescriptionTestTest.java test
