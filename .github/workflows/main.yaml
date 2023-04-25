@@ -27,5 +27,4 @@ jobs:
 
       - name: Running PHPUnit
         run: |
-          git update-index --chmod=+x application/third_party/vendor/bin/phpunit
-          sudo vendor/bin/phpunit  application/models/Project_Model.php
+          sudo vendor/bin/phpunit application/models/Project_Model.php
