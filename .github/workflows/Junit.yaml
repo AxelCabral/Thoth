@@ -16,4 +16,4 @@ jobs:
         run: mvn package
 
       - name: Tests Selenium
-        run: mvn test application/tests/Junit.Selenium/DescriptionTestTest.java
+        run: mvn tests application/tests/Junit.Selenium/DescriptionTestTest.java
