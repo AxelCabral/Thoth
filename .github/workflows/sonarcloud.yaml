@@ -21,7 +21,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        inputs:
-          SonarCloud: SonarCloud
-          organization: "axelcabral-1"
-          projectKey: "AxelCabral_Thoth"
+          args: -Dsonar.projectKey=AxelCabral_Thoth
+            -Dsonar.organization=axelcabral-1
